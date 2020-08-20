@@ -11,13 +11,21 @@ html {
     color: #333;
 }
 
-a {
+a, .title {
     text-decoration: none;
     color: #225ca3;
     font-weight: bold;
     transition: color .1s;
 }
 
+.signup1 {
+    color: white !important;
+}
+
+.or {
+    color: darkblue;
+    font-size: 20px;
+}
 a:hover {
     color: #3486eb;
 }
@@ -89,6 +97,14 @@ header h1 {
     font-size: 1em;
 }
 
+.title-signup {
+    font-size: 1.5em;
+    color: #225ca3;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
 main {
     flex: 1;
     padding: 2% 4%;
@@ -136,15 +152,6 @@ main {
     margin: -1.5% 0 2% 0;
 }
 
-.upvote-btn {
-    background-color: #197d0f;
-    transition: background-color .1s;
-}
-
-.upvote-btn:hover {
-    background-color: #1f9c13;
-}
-
 .comment-form {
     margin-bottom: 5%;
 }
@@ -155,7 +162,7 @@ main {
 }
 
 .comment:nth-child(odd) {
-    background-color: #fff5eb;
+    background-color: #eaf0f8;
 }
 
 .comment .meta {

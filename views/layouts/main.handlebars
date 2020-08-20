@@ -10,26 +10,22 @@
 </head>
 
 <body>
-  <div class="wrapper">
-
-    <div class="headline">
-      <nav class="navbar navbar-dark bg-dark ht-100">
+  <div class="headline navbar navbar-dark bg-dark ht-100">
+        <h1 class="title">
+          Tech Blog
+        </h1>
+      <nav>
         {{#if loggedIn}}
-        <a href="/">Home</a>
-        <a href="/dashboard">Dashboard</a>
-        <button id="logout" class="btn-no-style">Logout</button>
+        <a class="mx-3" href="/">Home</a>
+        <a class="mx-3"href="/dashboard">Dashboard</a>
+        <button id="logout" class="btn-no-style mx-5">Logout</button>
         {{else}}
-        <a href="/">Home</a>
-        <a href="/dashboard">Dashboard</a>
-        <a href="/login">Login</a>
-        <a href="/signup">Signup</a>
+        <a class="mx-3" href="/">Home</a>
+        <a class="mx-3" href="/dashboard">Dashboard</a>
+        <a class="mx-3" href="/login">Login</a>
+        <a class="mx-3" href="/signup">Signup</a>
         {{/if}}
       </nav>
-      <header>
-        <h1>
-          <p class="title">Tech Blog</p>
-        </h1>
-      </header>
     </div>
     <main>
       {{{ body }}}
