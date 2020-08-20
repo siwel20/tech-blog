@@ -11,27 +11,27 @@ const sequelize = require('../../config/connection');
 router.get('/', (req, res) => {
   Post.findAll({
       attributes: [
-        'id', 
-        'post_url', 
-        'title', 
+        'id',
+        'post_url',
+        'title',
         'created_at'
       ],
       order: [
         ['created_at', 'DESC']
       ],
-      include: [
-        {
+      include: [{
           model: Comment,
           attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
           include: {
-            model: User, 
+            model: User,
             attributes: ['username']
           }
-      },
-      {
-        model:User,
-        attributes: ['username']
-      }]
+        },
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
     })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -47,23 +47,24 @@ router.get('/:id', (req, res) => {
         id: req.params.id
       },
       attributes: [
-        'id', 
+        'id',
         'post_url',
-        'title', 
+        'title',
         'created_at',
       ],
       include: [{
-        model: Comment,
-        attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-        include: {
-          model: User, 
-          attributes: ['username']
+          model: Comment,
+          attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
+          include: {
+            model: User,
+            attributes: ['username']
           }
-      },
-      {
-        model: User,
-        attributes: ['username']
-      }]
+        },
+        {
+          model: User,
+          attributes: ['username']
+        }
+      ]
     })
     .then(dbPostData => {
       if (!dbPostData) {

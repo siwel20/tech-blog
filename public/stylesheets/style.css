@@ -11,7 +11,8 @@ html {
     color: #333;
 }
 
-a, .title {
+a,
+.title {
     text-decoration: none;
     color: #225ca3;
     font-weight: bold;
@@ -26,6 +27,7 @@ a, .title {
     color: darkblue;
     font-size: 20px;
 }
+
 a:hover {
     color: #3486eb;
 }
