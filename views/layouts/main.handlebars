@@ -5,31 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
   <div class="headline navbar navbar-dark bg-dark ht-100">
-        <h1 class="title">
-          Tech Blog
-        </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a class="mx-3" href="/">Home</a>
-        <a class="mx-3"href="/dashboard">Dashboard</a>
-        <button id="logout" class="btn-no-style mx-5">Logout</button>
-        {{else}}
-        <a class="mx-3" href="/">Home</a>
-        <a class="mx-3" href="/dashboard">Dashboard</a>
-        <a class="mx-3" href="/login">Login</a>
-        <a class="mx-3" href="/signup">Signup</a>
-        {{/if}}
-      </nav>
-    </div>
-    <main>
-      {{{ body }}}
-    </main>
+    <h1 class="title">
+      Tech Blog
+    </h1>
+    <nav>
+      {{#if loggedIn}}
+      <a class="mx-3" href="/">Home</a>
+      <a class="mx-3" href="/dashboard">Dashboard</a>
+      <button id="logout" class="btn-no-style mx-5">Logout</button>
+      {{else}}
+      <a class="mx-3" href="/">Home</a>
+      <a class="mx-3" href="/dashboard">Dashboard</a>
+      <a class="mx-3" href="/login">Login</a>
+      <a class="mx-3" href="/signup">Signup</a>
+      {{/if}}
+    </nav>
+  </div>
+  <main>
+    {{{ body }}}
+  </main>
 
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>

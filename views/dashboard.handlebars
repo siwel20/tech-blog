@@ -1,42 +1,37 @@
-<div class="container">
-  <div class="card bg-light width: 100%;">
-    <div class="mx-4 my-4">
-      <section>
-        <div class="title-signup">Create New Post</div>
-        <form class="new-post-form">
-          <div>
-            <label class="title" for="post-title">Title</label>
-            <input type="text" id="post-title" name="post-title" />
-          </div>
-          <div>
-            <label class="title" for="post-url">Link</label>
-            <input id="post-url" name="post-url" />
-          </div>
-          <button type="submit">Create</button>
-        </form>
-      </section>
-    </div>
+<div class="card bg-light width: 100%;">
+  <div class="mx-4 my-4">
+    <section>
+      <div class="title-signup">Create New Post</div>
+      <form class="new-post-form">
+        <div>
+          <label class="title" for="post-title">Title</label>
+          <input type="text" id="post-title" name="post-title" />
+        </div>
+        <div>
+          <label class="title" for="post-url">Link</label>
+          <input id="post-url" name="post-url" />
+        </div>
+        <button type="submit">Create</button>
+      </form>
+    </section>
   </div>
 </div>
 
-
 {{#if posts.length}}
-<div class="container">
-  <div class="card bg-light width: 100%;">
-    <div class="mx-4 my-4">
-      <section>
-        <div class="title-signup">Your Posts</div>
-        <ol>
-          {{#each posts as |post|}}
-          <li>
-            {{> post-info post}}
-            <br>
-            <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
-          </li>
-          {{/each}}
-        </ol>
-      </section>
-    </div>
+<div class="card bg-light width: 100%;">
+  <div class="mx-4 my-4">
+    <section>
+      <div class="title-signup">Your Posts</div>
+      <ol>
+        {{#each posts as |post|}}
+        <li>
+          {{> post-info post}}
+          <br>
+          <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+        </li>
+        {{/each}}
+      </ol>
+    </section>
   </div>
 </div>
 {{/if}}
